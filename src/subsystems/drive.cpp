@@ -3,13 +3,13 @@
 #include "okapi/api/odometry/point.hpp"
 using namespace okapi;
 int state=1; //state stores the brake mode of the drive where 1 is coast(default) and 2 is held 
-Motor rightFront(18, false, AbstractMotor::gearset::blue, AbstractMotor::encoderUnits::degrees);// motor for the front(drive)
-Motor rightMiddle(1, true, AbstractMotor::gearset::blue, AbstractMotor::encoderUnits::degrees);// the right motor on he top, back (drive)
-Motor rightBack(2, false, AbstractMotor::gearset::blue, AbstractMotor::encoderUnits::degrees);// right motor on the bottom,back (drive)
+Motor rightFront(4, false, AbstractMotor::gearset::blue, AbstractMotor::encoderUnits::degrees);// motor for the front(drive)
+Motor rightMiddle(16, false, AbstractMotor::gearset::blue, AbstractMotor::encoderUnits::degrees);// the right motor on he top, back (drive)
+Motor rightBack(17, false, AbstractMotor::gearset::blue, AbstractMotor::encoderUnits::degrees);// right motor on the bottom,back (drive)
 
-Motor leftFront(6, true, AbstractMotor::gearset::blue, AbstractMotor::encoderUnits::degrees);//motor for the front (drive)
-Motor leftMiddle(4, false, AbstractMotor::gearset::blue, AbstractMotor::encoderUnits::degrees);//the right motor on he top, back (drive)
-Motor leftBack(5, true, AbstractMotor::gearset::blue, AbstractMotor::encoderUnits::degrees);// left motor on the bottom,back (drive)
+Motor leftFront(11, true, AbstractMotor::gearset::blue, AbstractMotor::encoderUnits::degrees);//motor for the front (drive)
+Motor leftMiddle(12, true, AbstractMotor::gearset::blue, AbstractMotor::encoderUnits::degrees);//the right motor on he top, back (drive)
+Motor leftBack(13, true, AbstractMotor::gearset::blue, AbstractMotor::encoderUnits::degrees);// left motor on the bottom,back (drive)
 
 MotorGroup leftDrive ({leftFront,leftMiddle,leftBack}); //define the left side of the drive as a motor group to allow cleaner code
 MotorGroup rightDrive({rightFront,rightMiddle,rightBack});//define the left side of the drive as a motor group to allow cleaner code
