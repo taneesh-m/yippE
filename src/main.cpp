@@ -89,10 +89,13 @@ void opcontrol() {
 	// 	right_mtr = right;
 
 	// 	pros::delay(20);
-	while (true)
-	{
+	while (true){
+		okapi::Rate rate;
+		
 	updateDrive();
 	updateIntake();
+	updateCata();
+	rate.delay(100_Hz);
 	}
 	
 }

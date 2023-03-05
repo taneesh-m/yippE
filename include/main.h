@@ -78,6 +78,7 @@ void opcontrol(void);
 #include "globals.hpp"
 #include "subsystems/drive.hpp"
 #include "subsystems/intake.hpp"
+#include "subsystems/cata.hpp"
 //#include <iostream>
 #endif
 
